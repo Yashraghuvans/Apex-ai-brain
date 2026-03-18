@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Local Environment
+.env
+
+# SFAI Session Data & Logs
+.sfai/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
+# Misc
+.idea/
+.vscode/
