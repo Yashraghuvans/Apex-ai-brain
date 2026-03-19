@@ -14,9 +14,9 @@ Understand how Apex AI Brain selects and routes tasks between different AI model
 
 ```
 Models:
-├─ Claude 3 Opus      (200k context) - Most capable
-├─ Claude 3 Sonnet    (200k context) - Balanced  
-└─ Claude 3 Haiku     (200k context) - Fast & cheap
+├─ Claude Opus        (200k context) - Most capable
+  ├─ Claude Sonnet      (200k context) - Balanced  
+  └─ Claude Haiku       (200k context) - Fast & cheap
 
 Pricing:
 ├─ Opus:   $15 / 1M input,  $75 / 1M output

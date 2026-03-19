@@ -230,15 +230,23 @@ Ready for deployment
 ### What Each Agent Can Do
 
 | Agent | Read | Write | Analyze | Generate |
-|-------|------|-------|---------|----------|
-| Apex Architect |  |  |  |  Code |
-| LWC Builder |  |  |  |  Components |
-| Apex Reviewer |  |  |  |  Reviews |
-| Test Writer |  |  |  |  Tests |
-| SOQL Optimizer |  | - |  |  Queries |
-| Security Agent |  |  |  |  Fixes |
-| Schema Analyst |  |  |  |  Design |
-| Flow Advisor |  |  |  |  Flows |
+|-------|:----:|:-----:|:-------:|:--------:|
+| Apex Architect | X | X | X | Code |
+| LWC Builder | X | X | - | Components |
+| Apex Reviewer | X | - | X | Reviews |
+| Test Writer | X | X | X | Tests |
+| SOQL Optimizer | X | - | X | Queries |
+| Security Agent | X | - | X | Fixes |
+| Schema Analyst | X | X | X | Design |
+| Flow Advisor | X | X | X | Flows |
+| Planner | X | - | X | Plans |
+| Git Agent | X | - | X | Commits |
+| Diff Reviewer | X | - | X | Reports |
+| Memory Agent | X | X | X | Snapshots |
+| Kanban Agent | X | X | X | Sprints |
+| Deployment Agent | X | X | - | Deployments |
+| Metadata Manager | X | X | X | Configs |
+| Debug Agent | X | - | X | Fixes |
 
 ---
 

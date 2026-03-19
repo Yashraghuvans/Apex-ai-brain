@@ -11,6 +11,28 @@ sidebar_position: 1
 ![Powered by Claude & Gemini](https://img.shields.io/badge/Powered_by-Claude_&_Gemini-8E75B2?style=flat)
 ![Architecture: FSD](https://img.shields.io/badge/Architecture-FSD-FF6B6B.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-green.svg)
+
+**Tired of AI generating code that violates Salesforce governor limits? Apex AI Brain enforces best practices automatically.**
+
+Apex AI Brain is an enterprise-grade, multi-agent AI framework that generates production-ready Salesforce code with built-in guardrails, not hallucinations.
+
+## What Problem Does This Solve?
+
+Generic AI coding assistants (Copilot, ChatGPT, Claude) were trained on web patterns that don't work in Salesforce. They generate:
+
+- Non-bulkified code that hits governor limits
+- Triggers instead of Flows
+- Synchronous operations causing timeouts
+- Hardcoded IDs and insecure queries
+- Incorrect folder structures
+
+**Apex AI Brain solves this by:**
+- Injecting Salesforce rules directly into the AI's prompts
+- Validating every generated line against 50+ governance rules
+- Using multi-agent orchestration for complex tasks
+- Tracking costs and tokens in real-time
+- Enforcing Feature-Sliced Design (FSD) architecture
 
 ## Enterprise-Grade Salesforce AI Architecture System
 
@@ -34,7 +56,7 @@ Think of Apex AI Brain as **architectural ESLint rules for AI**. By utilizing th
 | Feature | Description |
 |---------|-------------|
 | **16 Specialized Agents** | Each agent focuses on a specific Salesforce domain (Apex, LWC, Flows, SOQL, etc.) |
-| **Multi-Model AI** | Seamless integration with Claude 3 & Google Gemini for optimal performance |
+| **Multi-Model AI** | Seamless integration with Claude & Google Gemini for optimal performance |
 | **Context Awareness** | Deep project scanning to understand existing architecture |
 | **Token Tracking** | Real-time cost tracking across multiple AI models |
 | **Guardrails & Security** | Enforced best practices and security patterns |

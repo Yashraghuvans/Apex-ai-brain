@@ -158,7 +158,7 @@ sfai /model <subcommand>
 - `info` - Show current settings
 
 **Models:**
-- `claude` - Claude 3 (default)
+- `claude` - Claude (default)
 - `gemini` - Google Gemini
 - `gpt4` - OpenAI GPT-4
 

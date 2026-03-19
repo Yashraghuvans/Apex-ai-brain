@@ -18,7 +18,7 @@ Before installing, make sure you have:
 ## Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/Apex-ai-brain.git
+git clone https://github.com/Yashraghuvans/Apex-ai-brain.git
 cd Apex-ai-brain
 ```
 
@@ -58,7 +58,7 @@ PROJECT_WORKSPACE=/path/to/your/salesforce-project
 5. Copy and paste into `.env`
 
 #### Google Gemini
-1. Visit [makersuite.google.com](https://makersuite.google.com/)
+1. Visit [aistudio.google.com](https://aistudio.google.com/)
 2. Click on "Get API Key"
 3. Create a new API key
 4. Copy and paste into `.env`
@@ -128,7 +128,7 @@ After installation:
 ## Getting Help
 
 - 📖 Check the [CLI Usage Guide](../guides/cli-usage.md)
-- 🐛 Report issues on [GitHub Issues](https://github.com/your-username/Apex-ai-brain/issues)
-- 💬 Ask questions in [GitHub Discussions](https://github.com/your-username/Apex-ai-brain/discussions)
+- Report issues on [GitHub Issues](https://github.com/Yashraghuvans/Apex-ai-brain/issues)
+- Ask questions in [GitHub Discussions](https://github.com/Yashraghuvans/Apex-ai-brain/discussions)
 - 📧 Email: support@apexai.dev
 

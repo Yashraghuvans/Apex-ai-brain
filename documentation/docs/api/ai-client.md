@@ -48,7 +48,7 @@ SFAI_DEFAULT_MODEL=gemini
 
 ## Supported Models
 
-- `claude` - Claude 3 (default)
+- `claude` - Claude (default)
 - `gemini` - Google Gemini
 - `gpt4` - OpenAI GPT-4 (experimental)
 

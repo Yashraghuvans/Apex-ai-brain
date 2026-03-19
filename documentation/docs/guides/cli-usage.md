@@ -219,7 +219,7 @@ sfai /model info              # Show current settings
 ```
 
 **Models:**
-- `claude` - Claude 3 (default, most capable)
+- `claude` - Claude (default, most capable)
 - `gemini` - Google Gemini (fast, cost-effective)
 - `gpt4` - OpenAI GPT-4 (experimental)
 
@@ -242,7 +242,7 @@ Tokens:    45,234
 Cost:      $0.68
 
 By Model:
-  Claude 3 Opus:     30,000 tokens  ($0.45)
+  Claude Opus:       30,000 tokens  ($0.45)
   Gemini Pro:        15,234 tokens  ($0.23)
 
 Monthly Tracking:

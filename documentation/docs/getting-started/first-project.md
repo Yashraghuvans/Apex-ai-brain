@@ -202,7 +202,7 @@ Session Tokens:    45,234
 Total Cost:        $0.68
 
 Breakdown by Model:
-- Claude 3 Opus:   30,000 tokens ($0.45)
+- Claude Opus:   30,000 tokens ($0.45)
 - Gemini Pro:      15,234 tokens ($0.23)
 
 Current Budget:    $10.00

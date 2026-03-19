@@ -79,6 +79,8 @@ const sidebars = {
         'concepts/guardrails-security',
         'concepts/token-management',
         'concepts/fsd-architecture',
+        'concepts/limitations',
+        'concepts/comparison',
       ],
     },
     {
