@@ -14,16 +14,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://Yashraghuvans.github.io',
+  url: 'https://apex-ai-brain.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Apex-ai-brain/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Yashraghuvans', // Usually your GitHub org/username.
-  projectName: 'Apex-ai-brain', // Usually your repo.
-  deploymentBranch: 'gh-pages',
+  // For Vercel deployment, use root path '/'
+  baseUrl: '/',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
