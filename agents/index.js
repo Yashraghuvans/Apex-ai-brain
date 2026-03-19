@@ -3,6 +3,7 @@ import { spawnAgent } from './runners/spawn.js';
 import { killAgent } from './runners/kill.js';
 import { agentLogger } from './runners/logger.js';
 import { fileExists } from '../utils/file-utils.js';
+import * as logger from '../utils/logger.js';
 import path from 'path';
 
 class AgentOrchestrator extends EventEmitter {
@@ -38,8 +39,14 @@ class AgentOrchestrator extends EventEmitter {
     });
 
     if (task) {
-      // Don't await here, let it run in background if spawned via orchestrator directly
-      agent.run(task).catch(e => console.error(`Agent ${name} error: ${e.message}`));
+      // Run task in background and track with promise
+      const taskPromise = agent.run(task, {}).catch(e => {
+        logger.error(`Agent ${name} task failed: ${e.message}`);
+        agent.setStatus('error', e.message);
+      });
+      
+      // Store promise for tracking
+      agent._taskPromise = taskPromise;
     }
     
     return agent;
