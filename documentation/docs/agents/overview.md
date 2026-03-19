@@ -249,7 +249,7 @@ Ready for deployment
 Speed of response (typical):
 
 ```
-Fast (<10s):        Gemini agents, optimization
+Fast (&lt;10s):        Gemini agents, optimization
 Medium (10-20s):    LWC Builder, SOQL Optimizer
 Slow (20-60s):      Apex Architect, Security Agent, Test Writer
 ```
@@ -424,7 +424,6 @@ Ready to meet each agent?
 - [Apex Architect](./apex-architect.md) - Master architect agent
 - [LWC Builder](./lwc-builder.md) - Component creation specialist
 - [Test Writer](./test-writer.md) - Quality assurance expert
-- [All Agents List](./index.md) - Complete directory
 
 Or jump to:
 - [CLI Usage](../guides/cli-usage.md) - How to use agents

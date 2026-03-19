@@ -14,6 +14,7 @@ const sidebars = {
   documentationSidebar: [
     'intro',
     {
+      type: 'category',
       label: 'Getting Started',
       items: [
         'getting-started/installation',
@@ -23,6 +24,7 @@ const sidebars = {
       ],
     },
     {
+      type: 'category',
       label: 'Guides',
       items: [
         'guides/cli-usage',
@@ -35,6 +37,7 @@ const sidebars = {
       ],
     },
     {
+      type: 'category',
       label: 'Agents',
       items: [
         'agents/overview',
@@ -57,6 +60,7 @@ const sidebars = {
       ],
     },
     {
+      type: 'category',
       label: 'API Reference',
       items: [
         'api/cli-commands',
@@ -67,6 +71,7 @@ const sidebars = {
       ],
     },
     {
+      type: 'category',
       label: 'Concepts',
       items: [
         'concepts/context-awareness',
@@ -77,6 +82,7 @@ const sidebars = {
       ],
     },
     {
+      type: 'category',
       label: 'Deployment',
       items: [
         'deployment/github-pages',

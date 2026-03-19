@@ -357,8 +357,8 @@ const results = await Promise.all([
 | Project Init | 30-60s | Depends on project size |
 | Plan Generation | 10-20s | Claude process time |
 | Agent Execution | 20-60s | Per agent, varies by task |
-| Memory Operations | <100ms | In-memory, very fast |
-| Token Calculation | <50ms | Simple arithmetic |
+| Memory Operations | &lt;100ms | In-memory, very fast |
+| Token Calculation | &lt;50ms | Simple arithmetic |
 
 ---
 
