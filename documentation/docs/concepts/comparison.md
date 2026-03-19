@@ -144,7 +144,7 @@ Evaluating AI coding tools for Salesforce? Here's how Apex AI Brain compares to 
 | Tool | Speed | Notes |
 |------|:-----:|-------|
 | Apex AI Brain | Fast (5-15s) | Depends on code complexity |
-| Copilot | Very Fast (<1s) | Real-time suggestions |
+| Copilot | Very Fast (&lt;1s) | Real-time suggestions |
 | Cursor | Fast (2-10s) | In-IDE processing |
 | CodeWhisperer | Fast (3-8s) | AWS-optimized |
 
