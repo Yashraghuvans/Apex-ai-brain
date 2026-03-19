@@ -1,6 +1,5 @@
 import chalk from 'chalk';
 import path from 'path';
-import fs from 'fs';
 import { access, mkdir, appendFile } from 'fs/promises';
 
 const LOG_LEVELS = {
@@ -25,7 +24,10 @@ async function writeToLogFile(level, message) {
   
   try {
     await access(sfaiDir);
-    if (!fs.existsSync(logDir)) {
+    // Try to access logDir, if it fails, create it
+    try {
+      await access(logDir);
+    } catch {
       await mkdir(logDir, { recursive: true });
     }
     const timestamp = new Date().toISOString();
