@@ -1,0 +1,111 @@
+<template>
+    <!-- {{componentName}} Component -->
+    <!-- 
+        ENFORCE: NO business logic in HTML
+        HTML responsibilities:
+        - Display UI using SLDS components
+        - Bind to JS properties (@track)
+        - Call event handlers (onclick, onchange)
+        - Show/hide based on state
+    -->
+    
+    <!-- Main container with SLDS wrapper -->
+    <div class="slds-box slds-theme_light">
+        
+        <!-- Error Boundary Pattern -->
+        <template if:true={hasError}>
+            <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                <button class="slds-button slds-button_icon slds-button_icon-inverse slds-notify__close" 
+                        title="Close" 
+                        onclick={clearError}>
+                    <svg class="slds-button__icon" aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M12 10.586L6.293 4.879A1 1 0 1 0 4.879 6.293L10.586 12l-5.707 5.707a1 1 0 1 0 1.414 1.414L12 13.414l5.707 5.707a1 1 0 0 0 1.414-1.414L13.414 12l5.707-5.707a1 1 0 0 0-1.414-1.414L12 10.586z"/>
+                    </svg>
+                </button>
+                <h2 class="slds-text-heading_medium slds-p-top_xx-small">{errorMessage}</h2>
+            </div>
+        </template>
+
+        <!-- Loading Spinner Pattern -->
+        <template if:true={isLoading}>
+            <div class="slds-is-relative slds-p-around_large">
+                <div class="slds-spinner_container">
+                    <div class="slds-spinner slds-spinner_medium" aria-hidden="false" role="status">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+                <p class="slds-text-align_center slds-p-top_medium">Loading...</p>
+            </div>
+        </template>
+
+        <!-- Main Content (shown when not loading/error) -->
+        <template if:false={isLoading}>
+            <template if:false={hasError}>
+                
+                <!-- Empty State Pattern -->
+                <template if:true={isEmpty}>
+                    <div class="slds-text-align_center slds-p-around_large">
+                        <svg class="slds-illustration__svg" viewBox="0 0 220 147" aria-hidden="true">
+                            <!-- SVG path for empty state icon -->
+                            <text class="slds-text-heading_medium slds-p-top_medium">No data available</text>
+                        </svg>
+                        <p class="slds-text-body_regular slds-p-top_medium">Start by clicking the button below</p>
+                    </div>
+                </template>
+
+                <!-- Content When Data Exists -->
+                <template if:false={isEmpty}>
+                    <div class="slds-p-around_medium">
+                        
+                        <!-- Descriptive Header -->
+                        <h1 class="slds-text-heading_large slds-p-bottom_medium">{{title}}</h1>
+                        <p class="slds-text-body_regular slds-p-bottom_large">{description}</p>
+
+                        <!-- Data Display Area -->
+                        <div class="slds-box slds-p-around_medium">
+                            <!-- Example: Card Layout -->
+                            <div class="slds-card">
+                                <div class="slds-card__header slds-grid">
+                                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                        <div class="slds-media__body">
+                                            <h2 class="slds-card__header-title">
+                                                <a href="javascript:void(0);">Item Data</a>
+                                            </h2>
+                                        </div>
+                                    </header>
+                                </div>
+                                <div class="slds-card__body">
+                                    <!-- Repeat through items -->
+                                    <template for:each={items} for:item="item">
+                                        <div key={item.id} class="slds-p-bottom_small slds-border_bottom">
+                                            <p class="slds-text-body_regular">{item.name}</p>
+                                            <p class="slds-text-body_small slds-text-color_weak">{item.description}</p>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="slds-p-top_large slds-grid slds-wrap slds-grid_pull-padded">
+                            <div class="slds-p-horizontal_small">
+                                <button class="slds-button slds-button_brand" onclick={handleSubmit}>
+                                    Submit
+                                </button>
+                            </div>
+                            <div class="slds-p-horizontal_small">
+                                <button class="slds-button slds-button_neutral" onclick={handleCancel}>
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </template>
+
+            </template>
+        </template>
+
+    </div>
+</template>
