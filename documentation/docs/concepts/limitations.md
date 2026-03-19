@@ -162,7 +162,7 @@ If you find a limitation not listed here, please:
 
 1. Check existing [GitHub Issues](https://github.com/Yashraghuvans/Apex-ai-brain/issues)
 2. Create a new issue with: Limitation + Use Case + Workaround
-3. Join [GitHub Discussions](https://github.com/Yashraghuvans/Apex-ai-brain/discussions) for community input
+3. Email the maintainer or check [SUPPORT.md](https://github.com/Yashraghuvans/Apex-ai-brain/blob/main/SUPPORT.md)
 
 ---
 

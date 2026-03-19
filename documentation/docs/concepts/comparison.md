@@ -234,4 +234,4 @@ Evaluating AI coding tools for Salesforce? Here's how Apex AI Brain compares to 
 **Last Updated:** March 19, 2026
 **Version:** 1.0.0
 
-Questions? Join our [GitHub Discussions](https://github.com/Yashraghuvans/Apex-ai-brain/discussions)
+Questions? Report an issue on [GitHub Issues](https://github.com/Yashraghuvans/Apex-ai-brain/issues)

@@ -129,6 +129,5 @@ After installation:
 
 - 📖 Check the [CLI Usage Guide](../guides/cli-usage.md)
 - Report issues on [GitHub Issues](https://github.com/Yashraghuvans/Apex-ai-brain/issues)
-- Ask questions in [GitHub Discussions](https://github.com/Yashraghuvans/Apex-ai-brain/discussions)
 - 📧 Email: support@apexai.dev
 

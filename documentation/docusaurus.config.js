@@ -100,10 +100,6 @@ const config = {
                 label: 'Issues',
                 href: 'https://github.com/Yashraghuvans/Apex-ai-brain/issues',
               },
-              {
-                label: 'Discussions',
-                href: 'https://github.com/Yashraghuvans/Apex-ai-brain/discussions',
-              },
             ],
           },
           {

@@ -124,7 +124,7 @@ sfai /tokens
 
 ### 🤝 Contributing
 
-We welcome contributions! See [Contributing Guide](https://github.com/your-username/Apex-ai-brain/blob/main/CONTRIBUTING.md) for details.
+We welcome contributions! See [Contributing Guide](https://github.com/Yashraghuvans/Apex-ai-brain/blob/main/CONTRIBUTING.md) for details.
 
 ### 📄 License
 
