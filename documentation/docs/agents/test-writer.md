@@ -12,10 +12,10 @@ Generates comprehensive test suites with high coverage and multiple test scenari
 
 ## Use Cases
 
-✅ Generate test classes
-✅ Create test scenarios
-✅ Calculate coverage
-✅ Optimize test performance
+ Generate test classes
+ Create test scenarios
+ Calculate coverage
+ Optimize test performance
 
 ## Command
 

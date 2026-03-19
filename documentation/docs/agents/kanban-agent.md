@@ -12,10 +12,10 @@ Manages task breakdowns, sprint planning, and agile workflows.
 
 ## Use Cases
 
-✅ Create sprint backlogs
-✅ Break down epic features
-✅ Plan sprints
-✅ Track progress
+ Create sprint backlogs
+ Break down epic features
+ Plan sprints
+ Track progress
 
 ## Command
 

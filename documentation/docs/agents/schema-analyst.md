@@ -12,10 +12,10 @@ Designs custom objects, relationships, and optimizes data structures.
 
 ## Use Cases
 
-✅ Design custom objects
-✅ Create relationships
-✅ Define field structures
-✅ Optimize data model
+ Design custom objects
+ Create relationships
+ Define field structures
+ Optimize data model
 
 ## Command
 

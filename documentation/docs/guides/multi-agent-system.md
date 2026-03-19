@@ -29,7 +29,7 @@ Complete Feature Ready
 
 ## Agent Categories
 
-### 🏗️ Architect Agents
+### 🏗 Architect Agents
 
 These agents design solutions following enterprise patterns.
 
@@ -85,7 +85,7 @@ These agents ensure code quality and compliance.
 - **Output:** Change analysis, commit messages
 - **Example Task:** `"Analyze changes between main and feature branch"`
 
-### ⚙️ Operations Agents
+###  Operations Agents
 
 These agents optimize and manage deployments.
 
@@ -188,11 +188,11 @@ Planner → Architect → Builder → Reviewer → Tester → Deployed
 
 **Example: Building Lead Scoring**
 1. 📋 Planner breaks down feature
-2. 🏗️ Architect designs service layer
+2. 🏗 Architect designs service layer
 3. 🔨 Developer builds implementation
 4. 🔍 Reviewer checks quality
-5. ✅ Tester writes tests
-6. 🚀 Deployed to org
+5.  Tester writes tests
+6.  Deployed to org
 
 ### Pattern 2: Parallel Architecture Pattern
 
@@ -215,7 +215,7 @@ Used for quality gates.
 Agent Output
     ↓
 Reviewer Assessment
-    ├─ ✅ Approved → Deploy
+    ├─  Approved → Deploy
     ├─ 🔄 Revise → Agent refines
     └─ ❌ Reject → Agent redesigns
 ```
@@ -464,12 +464,12 @@ else:
 
 ## Best Practices
 
-✅ **Plan before executing** - Use /plan command first
-✅ **Check memory** - Review previous outputs
-✅ **Use specific agents** - Choose the right tool
-✅ **Monitor costs** - Track token usage
-✅ **Review outputs** - Check /agent-logs
-✅ **Store results** - Use /memory to save valuable outputs
+ **Plan before executing** - Use /plan command first
+ **Check memory** - Review previous outputs
+ **Use specific agents** - Choose the right tool
+ **Monitor costs** - Track token usage
+ **Review outputs** - Check /agent-logs
+ **Store results** - Use /memory to save valuable outputs
 
 ❌ **Don't spawn too many agents** - Can cause confusion
 ❌ **Don't ignore dependencies** - Follow task order

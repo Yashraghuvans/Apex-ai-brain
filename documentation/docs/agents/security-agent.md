@@ -12,10 +12,10 @@ Conducts security audits, identifies vulnerabilities, and ensures compliance.
 
 ## Use Cases
 
-✅ Audit security
-✅ Find vulnerabilities  
-✅ Check compliance
-✅ Recommend hardening
+ Audit security
+ Find vulnerabilities  
+ Check compliance
+ Recommend hardening
 
 ## Command
 

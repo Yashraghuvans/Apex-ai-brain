@@ -12,7 +12,7 @@ Agents are specialized AI-powered assistants, each focused on a specific domain 
 
 ## Agent Directory
 
-### 🏗️ Architects (4 Agents)
+### 🏗 Architects (4 Agents)
 
 Agents responsible for design and architecture decisions.
 
@@ -84,7 +84,7 @@ Agents responsible for code review and quality assurance.
 - Suggests improvements
 - **Use when:** Reviewing changes
 
-### ⚙️ Operations (5 Agents)
+###  Operations (5 Agents)
 
 Agents responsible for optimization and deployment.
 
@@ -231,14 +231,14 @@ Ready for deployment
 
 | Agent | Read | Write | Analyze | Generate |
 |-------|------|-------|---------|----------|
-| Apex Architect | ✅ | ✅ | ✅ | ✅ Code |
-| LWC Builder | ✅ | ✅ | ✅ | ✅ Components |
-| Apex Reviewer | ✅ | ✅ | ✅ | ✅ Reviews |
-| Test Writer | ✅ | ✅ | ✅ | ✅ Tests |
-| SOQL Optimizer | ✅ | - | ✅ | ✅ Queries |
-| Security Agent | ✅ | ✅ | ✅ | ✅ Fixes |
-| Schema Analyst | ✅ | ✅ | ✅ | ✅ Design |
-| Flow Advisor | ✅ | ✅ | ✅ | ✅ Flows |
+| Apex Architect |  |  |  |  Code |
+| LWC Builder |  |  |  |  Components |
+| Apex Reviewer |  |  |  |  Reviews |
+| Test Writer |  |  |  |  Tests |
+| SOQL Optimizer |  | - |  |  Queries |
+| Security Agent |  |  |  |  Fixes |
+| Schema Analyst |  |  |  |  Design |
+| Flow Advisor |  |  |  |  Flows |
 
 ---
 
@@ -397,11 +397,11 @@ else:
 ### Shared Capabilities
 
 All agents can:
-- ✅ Read project context
-- ✅ Access shared memory
-- ✅ Generate documentation
-- ✅ Store results
-- ✅ Provide explanations
+-  Read project context
+-  Access shared memory
+-  Generate documentation
+-  Store results
+-  Provide explanations
 
 ### How Agents Share Knowledge
 

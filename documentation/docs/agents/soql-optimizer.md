@@ -12,10 +12,10 @@ Optimizes SOQL queries for performance and efficiency.
 
 ## Use Cases
 
-✅ Optimize queries
-✅ Suggest indexing
-✅ Analyze performance
-✅ Reduce execution time
+ Optimize queries
+ Suggest indexing
+ Analyze performance
+ Reduce execution time
 
 ## Command
 

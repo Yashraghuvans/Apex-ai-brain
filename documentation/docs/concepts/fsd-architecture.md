@@ -30,10 +30,10 @@ force-app/main/default/classes/
 
 ## Benefits
 
-✅ **Clear Organization** - Easy to find code
-✅ **Scalability** - Add features independently  
-✅ **Testability** - Isolated test coverage
-✅ **Collaboration** - Teams work independently
+ **Clear Organization** - Easy to find code
+ **Scalability** - Add features independently  
+ **Testability** - Isolated test coverage
+ **Collaboration** - Teams work independently
 
 ## Layer Responsibilities
 
@@ -50,11 +50,11 @@ force-app/main/default/classes/
 Valid dependency directions:
 
 ```
-Handler → Service ✅
-Service → Domain ✅
-Service → Selector ✅
-Domain → Selector ✅
-Selector → nothing ✅
+Handler → Service 
+Service → Domain 
+Service → Selector 
+Domain → Selector 
+Selector → nothing 
 
 Handler → Selector ❌ (skip layer)
 Domain → Service ❌ (backwards)

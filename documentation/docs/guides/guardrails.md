@@ -27,7 +27,7 @@ User Request
              ↓
 AI generates constrained response
              ↓
-✅ Guaranteed compliance output
+ Guaranteed compliance output
 ```
 
 ## Governor Limits Enforcement
@@ -37,7 +37,7 @@ AI generates constrained response
 Automatically enforced in all Apex agent outputs:
 
 ```javascript
-// ✅ Correct - Uses SOQL limits
+//  Correct - Uses SOQL limits
 public class LeadService {
   // Bulkified - handles 10k leads
   public static void updateLeads(List<Lead> leads) {
@@ -78,7 +78,7 @@ for (Lead l : leads) {
   l.AccountId = acc.Id;
 }
 
-// ✅ CORRECT - 1 query!
+//  CORRECT - 1 query!
 List<Account> accs = [SELECT Id FROM Account LIMIT 1];
 for (Lead l : leads) {
   l.AccountId = accs[0].Id;
@@ -93,7 +93,7 @@ for (Lead l : leads) {
   update l;  // Individual DML
 }
 
-// ✅ CORRECT - 1 update!
+//  CORRECT - 1 update!
 update leads;  // Batch DML
 ```
 
@@ -105,7 +105,7 @@ List<Account> accounts = [SELECT Id FROM Account];
 List<Contact> contacts = [SELECT Id FROM Contact];
 List<Opportunity> opportunities = [SELECT Id FROM Opportunity];
 
-// ✅ CORRECT - Single query with relationship
+//  CORRECT - Single query with relationship
 Map<Id, Account> accMap = new Map<Id, Account>(
   [SELECT Id, (SELECT Id FROM Contacts), (SELECT Id FROM Opportunities)
    FROM Account]
@@ -156,7 +156,7 @@ public class LeadTriggerHandler {
   }
 }
 
-// ✅ Correct: Via Service
+//  Correct: Via Service
 public class LeadTriggerHandler {
   void handle() {
     List<Lead> leads = LeadService.getLeadsByIds(ids);
@@ -174,7 +174,7 @@ public class ApiClient {
   private static final String API_KEY = 'sk-abc123xyz';
 }
 
-// ✅ CORRECT - Uses Custom Setting
+//  CORRECT - Uses Custom Setting
 public class ApiClient {
   private static final String API_KEY = 
     Api_Config__c.getInstance().API_Key__c;
@@ -192,7 +192,7 @@ public class AccountService {
   }
 }
 
-// ✅ CORRECT - Respects sharing
+//  CORRECT - Respects sharing
 public class AccountService {
   public static List<Account> getAccounts() {
     // WITH USER_MODE = Respects sharing rules
@@ -209,7 +209,7 @@ public static void process(String id) {
   Account acc = [SELECT Id FROM Account WHERE Id = :id];
 }
 
-// ✅ VALIDATED INPUT
+//  VALIDATED INPUT
 public static void process(String id) {
   if (String.isEmpty(id)) {
     throw new IllegalArgumentException('ID cannot be empty');
@@ -227,7 +227,7 @@ List<Lead> leads = [
   SELECT Id FROM Lead WHERE Name = name
 ];
 
-// ✅ SAFE - Uses bind variables
+//  SAFE - Uses bind variables
 String name = 'Smith';
 List<Lead> leads = [
   SELECT Id FROM Lead WHERE Name = :name
@@ -240,10 +240,10 @@ List<Lead> leads = [
 // ❌ VULNERABLE to XSS
 <p>{userInput}</p>
 
-// ✅ ESCAPED safely
+//  ESCAPED safely
 <p>{userInput!e}</p>
 
-// ✅ ESCAPED for URL
+//  ESCAPED for URL
 <a href="?id={recordId!u}">{recordId!u}</a>
 ```
 
@@ -251,15 +251,15 @@ List<Lead> leads = [
 
 ### Minimum Test Coverage
 
-- ✅ **85% code coverage** enforced
-- ✅ **Positive & negative** test scenarios
-- ✅ **Edge cases** covered
-- ✅ **All paths** tested
+-  **85% code coverage** enforced
+-  **Positive & negative** test scenarios
+-  **Edge cases** covered
+-  **All paths** tested
 
 ### Test Structure Validation
 
 ```apex
-// ✅ Valid test structure
+//  Valid test structure
 @IsTest
 private class LeadHandlerTest {
   static testMethod void testPositiveScenario() {
@@ -288,11 +288,11 @@ private class LeadHandlerTest {
 ```
 Pattern:        [Feature][Entity][Type]
 Examples:
-  ✅ LeadSelector          (Query class)
-  ✅ LeadService           (Business logic)
-  ✅ LeadDomain            (Domain model)
-  ✅ LeadTriggerHandler    (Trigger handler)
-  ✅ LeadServiceTest       (Test class)
+   LeadSelector          (Query class)
+   LeadService           (Business logic)
+   LeadDomain            (Domain model)
+   LeadTriggerHandler    (Trigger handler)
+   LeadServiceTest       (Test class)
 
 ❌ Wrong:       LDS, Service1, TestStuff, Handler
 ```
@@ -306,7 +306,7 @@ Template:       {camelCase}
 CSS:            kebab-case
 
 Examples:
-  ✅ lead-form/
+   lead-form/
        └─ leadForm.js
        └─ leadForm.html
        └─ lead-form.css
@@ -411,21 +411,21 @@ Violations by Category:
   Bulkification:      2 (↓ from 5)
   Governor Limits:    1
   Naming Convention:  3
-  Test Coverage:      0 ✅
+  Test Coverage:      0 
 
 Warnings:
-  ⚠️  LeadService: Pattern mismatch (minor)
-  ⚠️  AccountHandler: 82% coverage (target: 85%)
+  ⚠  LeadService: Pattern mismatch (minor)
+  ⚠  AccountHandler: 82% coverage (target: 85%)
 
 Trends:
-  ✅ Compliance up 15% this month
+   Compliance up 15% this month
 ```
 
 ---
 
 ## Best Practices
 
-✅ **Do This:**
+ **Do This:**
 - Review guardrail violations
 - Fix naming conventions early
 - Maintain test coverage

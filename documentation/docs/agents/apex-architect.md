@@ -12,10 +12,10 @@ Senior Salesforce architect specializing in Apex code design, FSD adoption, and 
 
 ## Responsibilities
 
-- 🏗️ Design Apex class structures
+- 🏗 Design Apex class structures
 - 📐 Apply design patterns (Selector, Service, Domain, Unit of Work)
-- ✅ Enforce Feature-Sliced Design (FSD)
-- 🎯 Ensure separation of concerns
+-  Enforce Feature-Sliced Design (FSD)
+-  Ensure separation of concerns
 - 📋 Create architecture specifications
 - 🔄 Propose refactoring strategies
 
@@ -173,22 +173,22 @@ force-app/main/default/classes/
 
 The Apex Architect automatically enforces:
 
-✅ **Bulkification Rules**
+ **Bulkification Rules**
 - No queries in loops
 - Batch DML operations
 - Map-based lookups
 
-✅ **Governor Limits**
+ **Governor Limits**
 - SOQL depth restrictions
 - DML statement limits
 - Heap size awareness
 
-✅ **Security**
+ **Security**
 - Input validation
 - Query string escaping
 - Permission checks
 
-✅ **Performance**
+ **Performance**
 - Efficient queries
 - Indexed lookups
 - Lazy loading
@@ -230,7 +230,7 @@ sfai /spawn apex-architect "Design lead scoring"
 
 ## Tips for Best Results
 
-### ✅ Be Specific
+###  Be Specific
 
 Good:
 ```
@@ -243,7 +243,7 @@ Bad:
 "Design something for leads"
 ```
 
-### ✅ Reference Existing Code
+###  Reference Existing Code
 
 Good:
 ```
@@ -251,7 +251,7 @@ Good:
 in force-app/main/default/classes/leads/"
 ```
 
-### ✅ Include Requirements
+###  Include Requirements
 
 Good:
 ```
@@ -262,7 +262,7 @@ Good:
 - Works with existing system"
 ```
 
-### ✅ Ask for Iteration
+###  Ask for Iteration
 
 Good:
 ```

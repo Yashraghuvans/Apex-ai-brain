@@ -12,10 +12,10 @@ Configures and manages Salesforce metadata, custom settings, and org configurati
 
 ## Use Cases
 
-✅ Configure custom settings
-✅ Manage metadata
-✅ Org configuration
-✅ Feature flag setup
+ Configure custom settings
+ Manage metadata
+ Org configuration
+ Feature flag setup
 
 ## Command
 

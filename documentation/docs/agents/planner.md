@@ -33,12 +33,12 @@ sfai /plan "Build a customer portal with LWC and approval workflow"
 
 ## Features
 
-✅ Decomposes features into atomic tasks
-✅ Assigns best-fit agents to each task
-✅ Identifies task dependencies
-✅ Suggests execution order
-✅ Estimates complexity levels
-✅ Stores plan in shared memory
+ Decomposes features into atomic tasks
+ Assigns best-fit agents to each task
+ Identifies task dependencies
+ Suggests execution order
+ Estimates complexity levels
+ Stores plan in shared memory
 
 ## Output Format
 

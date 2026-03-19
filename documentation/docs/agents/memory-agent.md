@@ -12,10 +12,10 @@ Manages shared memory, retrieves context, and maintains the knowledge base.
 
 ## Use Cases
 
-✅ Retrieve previous outputs
-✅ Manage memory entries
-✅ Search knowledge base
-✅ Organize context
+ Retrieve previous outputs
+ Manage memory entries
+ Search knowledge base
+ Organize context
 
 ## Command
 

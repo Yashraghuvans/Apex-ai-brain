@@ -12,10 +12,10 @@ Reviews code commits and git diffs, providing change analysis and improvement su
 
 ## Use Cases
 
-✅ Analyze code changes
-✅ Review pull request diffs
-✅ Generate change summaries
-✅ Suggest improvements
+ Analyze code changes
+ Review pull request diffs
+ Generate change summaries
+ Suggest improvements
 
 ## Command
 

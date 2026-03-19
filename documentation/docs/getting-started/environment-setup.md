@@ -331,7 +331,7 @@ ls -la .env
 
 ## Next Steps
 
-- ✅ Complete environment setup
+-  Complete environment setup
 - 📖 Run [Installation Guide](./installation.md) next
-- 🚀 Start with [Quick Start](./quick-start.md)
+-  Start with [Quick Start](./quick-start.md)
 

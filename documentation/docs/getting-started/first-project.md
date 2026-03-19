@@ -227,7 +227,7 @@ sfai /memory get "portal_apex_service"
 
 ## Best Practices
 
-### ✅ Do This
+###  Do This
 
 - Initialize before starting work
 - Run `/plan` before `/spawn`
@@ -272,7 +272,7 @@ force-app/main/default/
 ## Next Steps
 
 - 📖 Read [CLI Usage Guide](../guides/cli-usage.md)
-- 🤖 Explore all [Agents](../agents/overview.md)
+-  Explore all [Agents](../agents/overview.md)
 - 📚 Learn about [FSD Architecture](../concepts/fsd-architecture.md)
 - 🔍 Understand [Context Awareness](../concepts/context-awareness.md)
 

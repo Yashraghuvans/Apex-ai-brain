@@ -154,7 +154,7 @@ sfai /agents
 Available Agents (16 total)
 ===========================
 
-🏗️  ARCHITECT AGENTS
+🏗  ARCHITECT AGENTS
   ├─ apex-architect          Design Apex structures & patterns
   ├─ lwc-builder             Build Lightning Web Components
   ├─ schema-analyst          Design data models
@@ -166,7 +166,7 @@ Available Agents (16 total)
   ├─ test-writer             Write comprehensive tests
   └─ diff-reviewer           Analyze code changes
 
-⚙️  OPERATIONS
+  OPERATIONS
   ├─ soql-optimizer          Optimize SOQL queries
   ├─ metadata-manager        Manage metadata
   ├─ git-agent               Handle git operations
@@ -348,11 +348,11 @@ sfai /spawn security-agent "Check for security vulnerabilities in authentication
 
 The CLI runs in an interactive REPL mode. Tips:
 
-✅ **Use arrow keys** to navigate command history
-✅ **Type `/help`** for a quick reminder
-✅ **Press Tab** for command autocomplete (if enabled)
-✅ **Type keywords** to search previous agent outputs
-✅ **Use `/memory get`** to retrieve previous results
+ **Use arrow keys** to navigate command history
+ **Type `/help`** for a quick reminder
+ **Press Tab** for command autocomplete (if enabled)
+ **Type keywords** to search previous agent outputs
+ **Use `/memory get`** to retrieve previous results
 
 ---
 

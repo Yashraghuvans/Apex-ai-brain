@@ -12,10 +12,10 @@ Designs Salesforce Flows, automations, and process workflows.
 
 ## Use Cases
 
-✅ Design approval workflows
-✅ Create process automations
-✅ Optimize flow logic
-✅ Handle decision trees
+ Design approval workflows
+ Create process automations
+ Optimize flow logic
+ Handle decision trees
 
 ## Command
 

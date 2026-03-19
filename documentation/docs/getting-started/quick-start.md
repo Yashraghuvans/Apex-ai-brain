@@ -176,24 +176,24 @@ Or get specific agent logs:
 
 ## Tips for Success
 
-✅ **Be specific** - The more detail in your request, the better the output
+ **Be specific** - The more detail in your request, the better the output
 - ❌ `/plan "Build a portal"`
-- ✅ `/plan "Build a customer self-service portal with LWC that uses enterprise record access"`
+-  `/plan "Build a customer self-service portal with LWC that uses enterprise record access"`
 
-✅ **Use context** - Agents read previous context
+ **Use context** - Agents read previous context
 - Run `/init` first to populate project knowledge
 - Results are stored in shared memory
 
-✅ **Plan before building** - Use `/plan` command first
+ **Plan before building** - Use `/plan` command first
 - Breaks down work logically
 - Identifies dependencies
 - Prevents rework
 
-✅ **Review in stages** - Check agent output before going deeper
+ **Review in stages** - Check agent output before going deeper
 - Use `/agent-logs` to review
 - Adjust approach if needed
 
-✅ **Monitor costs** - Check tokens regularly
+ **Monitor costs** - Check tokens regularly
 - Different models cost different amounts
 - Use `/tokens` to track spending
 - Set budgets if needed
@@ -203,7 +203,7 @@ Or get specific agent logs:
 ## Next Steps
 
 - 📖 Read the [CLI Usage Guide](../guides/cli-usage.md) for detailed command reference
-- 🤖 Learn about [Agents](../agents/overview.md)
-- 🏗️ Understand [Architecture](../guides/architecture-overview.md)
-- 💡 Explore [Concepts](../concepts/multi-agent-orchestration.md)
+-  Learn about [Agents](../agents/overview.md)
+- 🏗 Understand [Architecture](../guides/architecture-overview.md)
+-  Explore [Concepts](../concepts/multi-agent-orchestration.md)
 

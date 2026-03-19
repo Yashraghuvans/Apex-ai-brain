@@ -22,7 +22,7 @@ AI Response
 │ ✓ Performance OK│
 └────────┬────────┘
          ↓
-    ✅ Approved
+     Approved
 ```
 
 ## Key Guardrails

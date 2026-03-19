@@ -18,18 +18,18 @@ Apex AI Brain is an **agentic framework and prompt architecture** designed to tr
 
 Instead of relying on generic AI knowledge (which often hallucinates standard web patterns that violate Salesforce limits), this system injects strict governor limits, bulkification rules, and Feature-Sliced Design (FSD) folder structures directly into the AI's reasoning.
 
-### 🎯 Core Purpose
+###  Core Purpose
 
 Think of Apex AI Brain as **architectural ESLint rules for AI**. By utilizing this framework, you force the AI to:
 
-- ✅ Write bulkified, `WITH USER_MODE` compliant Apex
-- ✅ Choose Flows over Triggers where appropriate
-- ✅ Follow strict LWC data-binding patterns
-- ✅ Adhere to an enterprise folder structure
-- ✅ Enforce Salesforce governor limits
-- ✅ Generate production-ready code with guardrails
+-  Write bulkified, `WITH USER_MODE` compliant Apex
+-  Choose Flows over Triggers where appropriate
+-  Follow strict LWC data-binding patterns
+-  Adhere to an enterprise folder structure
+-  Enforce Salesforce governor limits
+-  Generate production-ready code with guardrails
 
-### 🚀 Key Features
+###  Key Features
 
 | Feature | Description |
 |---------|-------------|
@@ -52,7 +52,7 @@ Think of Apex AI Brain as **architectural ESLint rules for AI**. By utilizing th
 └── Memory System             # Persistent context management
 ```
 
-### 🏗️ Architecture Overview
+### 🏗 Architecture Overview
 
 Apex AI Brain uses a **multi-agent orchestration** pattern where:
 

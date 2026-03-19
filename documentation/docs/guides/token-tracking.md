@@ -111,7 +111,7 @@ Month:    March 2024
 Budget:   $100.00
 Spent:    $72.45
 Remaining: $27.55
-Status:   ✅ On track (73% used)
+Status:    On track (73% used)
 
 Daily Average: $2.41
 Days Left:     9
@@ -362,7 +362,7 @@ sfai /spawn --max-cost 0.30 optimizer "..."
 # Result: ❌ Rejected (exceeds max)
 
 sfai /spawn --max-cost 0.60 optimizer "..."
-# Result: ✅ Allowed
+# Result:  Allowed
 ```
 
 ## Integration with Billing
@@ -398,7 +398,7 @@ POST /webhook/costs
 
 ## Best Practices
 
-✅ **Do This:**
+ **Do This:**
 - Check estimates before spawning complex agents
 - Use appropriate models for task complexity
 - Monitor token usage regularly

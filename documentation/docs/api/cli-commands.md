@@ -328,19 +328,19 @@ sfai /init && sfai /status && sfai /plan "feature"
 
 ## Tips & Tricks
 
-✅ **Use command history**
+ **Use command history**
 - Arrow up/down to navigate
 - Ctrl+R to search history
 
-✅ **Abbreviate if possible**
+ **Abbreviate if possible**
 - Many commands have shorter forms
 - `/spawn` = `/agent-spawn`
 
-✅ **Save useful outputs**
+ **Save useful outputs**
 - Use `/memory export` for backup
 - Use `/tokens --export` for billing
 
-✅ **Chain dependent tasks**
+ **Chain dependent tasks**
 - Store outputs in memory
 - Reference in next command
 

@@ -12,10 +12,10 @@ Handles git workflows, commits, branches, and release management.
 
 ## Use Cases
 
-✅ Generate commit messages
-✅ Create PR descriptions
-✅ Manage branches
-✅ Generate CHANGELOG
+ Generate commit messages
+ Create PR descriptions
+ Manage branches
+ Generate CHANGELOG
 
 ## Command
 

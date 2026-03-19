@@ -25,10 +25,10 @@ Pricing:
 ```
 
 **Strengths:**
-- ✅ Excellent code generation
-- ✅ Strong reasoning
-- ✅ Good context understanding
-- ✅ Architectural design
+-  Excellent code generation
+-  Strong reasoning
+-  Good context understanding
+-  Architectural design
 
 ### Google Gemini - Fast & Efficient
 
@@ -45,10 +45,10 @@ Pricing:
 ```
 
 **Strengths:**
-- ✅ Very fast responses
-- ✅ Cost-effective
-- ✅ Good for code review
-- ✅ Parallel processing friendly
+-  Very fast responses
+-  Cost-effective
+-  Good for code review
+-  Parallel processing friendly
 
 ### GPT-4 / GPT-4 Turbo - Experimental
 
@@ -204,7 +204,7 @@ By Agent:
 Projected Monthly:
   Current:  $20.40
   Budget:   $100.00
-  Status:   ✅ On track
+  Status:    On track
 ```
 
 ### Cost Optimization
@@ -216,7 +216,7 @@ Projected Monthly:
 apex-architect using Opus to optimize query
   Cost: $0.15 for quick task
 
-✅ RIGHT:
+ RIGHT:
 soql-optimizer using Gemini to optimize query
   Cost: $0.02 for same task (7.5x cheaper!)
 ```

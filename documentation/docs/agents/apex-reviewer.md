@@ -12,10 +12,10 @@ The Apex Reviewer performs comprehensive code reviews focusing on maintainabilit
 
 ## Use Cases
 
-✅ Review Apex classes for best practices
-✅ Validate design pattern usage
-✅ Check code quality and complexity
-✅ Identify refactoring opportunities
+ Review Apex classes for best practices
+ Validate design pattern usage
+ Check code quality and complexity
+ Identify refactoring opportunities
 
 ## Command
 

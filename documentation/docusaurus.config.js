@@ -55,10 +55,6 @@ const config = {
       image: 'img/apex-social-card.jpg',
       navbar: {
         title: 'Apex AI Brain',
-        logo: {
-          alt: 'Apex AI Brain Logo',
-          src: 'img/apex-logo.png',
-        },
         items: [
           {
             type: 'docSidebar',
@@ -124,7 +120,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Apex AI Brain. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Apex AI Brain. Built by Yash Raghuvanshi (@Yashraghuvans). Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

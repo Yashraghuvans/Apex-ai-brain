@@ -437,7 +437,7 @@ Stores → Reads    Reads      Reads
 
 ## Best Practices
 
-✅ **Do This:**
+ **Do This:**
 - Regular memory exports (backups)
 - Tag entries meaningfully
 - Clear old session entries
