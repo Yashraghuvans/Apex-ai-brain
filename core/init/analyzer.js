@@ -1,5 +1,6 @@
 import path from 'path';
 import { readFile } from '../../utils/file-utils.js';
+import * as logger from '../../utils/logger.js';
 
 export async function analyzeProject(scanResult) {
   const { apexClasses, triggers, lwcComponents, metadata, projectType } = scanResult;
@@ -57,7 +58,7 @@ async function analyzeTriggers(triggers) {
         triggerMap.get(objectName).push(triggerName);
       }
     } catch (e) {
-      // ignore read errors
+      logger.warn(`Could not read trigger file: ${e.message}`);
     }
   }
 

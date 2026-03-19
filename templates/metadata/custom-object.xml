@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    
+    <!-- Allow Activities -->
+    <allowInChatterGroups>false</allowInChatterGroups>
+    
+    <!-- Chatter Feed Tracking -->
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    
+    <!-- Enable Deployment Status Tracking -->
+    <deploymentStatusFields />
+    
+    <!-- Description of this object -->
+    <description>{{description}}</description>
+    
+    <!-- Enable Activities (Tasks, Events) -->
+    <enableActivities>true</enableActivities>
+    
+    <!-- Enable Change Data Capture -->
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    
+    <!-- Enable Chatter Feed -->
+    <enableFeeds>false</enableFeeds>
+    
+    <!-- Enable Field History Tracking -->
+    <enableHistory>true</enableHistory>
+    
+    <!-- Enable Reports and Dashboards -->
+    <enableReports>true</enableReports>
+    
+    <!-- Enable Sharing -->
+    <enableSharing>true</enableSharing>
+    
+    <!-- Enable Streaming API -->
+    <enableStreamingApi>true</enableStreamingApi>
+    
+    <!-- Field Level Security -->
+    <fields>
+        <fullName>Status__c</fullName>
+        <defaultValue>"Active"</defaultValue>
+        <description>Status of the record</description>
+        <externalId>false</externalId>
+        <fieldManageability>DefinedByMetadata</fieldManageability>
+        <inlineHelpText>Current status of this record</inlineHelpText>
+        <label>Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Detailed description of the record</description>
+        <externalId>false</externalId>
+        <fieldManageability>DefinedByMetadata</fieldManageability>
+        <inlineHelpText>Provide a detailed description</inlineHelpText>
+        <label>Description</label>
+        <length>32000</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    
+    <!-- List Views -->
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    
+    <!-- Object Name and Label -->
+    <label>{{label}}</label>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+        <length>80</length>
+        <required>true</required>
+    </nameField>
+    
+    <!-- Plural Label -->
+    <pluralLabel>{{pluralLabel}}</pluralLabel>
+    
+    <!-- Define Search Layouts -->
+    <searchLayoutFields>Id</searchLayoutFields>
+    <searchLayoutFields>Name</searchLayoutFields>
+    <searchLayoutFields>Status__c</searchLayoutFields>
+    
+    <!-- Sharing Model: Determines default access -->
+    <sharingModel>ReadWrite</sharingModel>
+    
+    <!-- Enable for REST API -->
+    <visibility>All</visibility>
+</CustomObject>

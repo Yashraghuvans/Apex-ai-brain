@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>{{description}}</description>
+    <label>{{permSetName}}</label>
+    <license>Salesforce</license>
+    
+    <!-- Object Permissions: Grant access to objects -->
+    <objectPermissions>
+        <object>Account</object>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    
+    <objectPermissions>
+        <object>Contact</object>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    
+    <!-- Field-Level Security: Grant access to specific fields -->
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Name</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.BillingCity</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Sensitive_Field__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    
+    <!-- Apex Class Permissions -->
+    <classAccesses>
+        <apexClass>AccountService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    
+    <!-- System Permissions: Grant system-wide capabilities -->
+    <systemPermissions>
+        <enabled>true</enabled>
+        <name>ApiEnabled</name>
+    </systemPermissions>
+    
+    <systemPermissions>
+        <enabled>true</enabled>
+        <name>CanViewAllData</name>
+    </systemPermissions>
+    
+    <systemPermissions>
+        <enabled>true</enabled>
+        <name>CreateCustomReports</name>
+    </systemPermissions>
+    
+    <systemPermissions>
+        <enabled>true</enabled>
+        <name>AssignPermissionSets</name>
+    </systemPermissions>
+    
+    <systemPermissions>
+        <enabled>false</enabled>
+        <name>ImportCustomObjects</name>
+    </systemPermissions>
+    
+    <!-- Tab Permissions -->
+    <tabSettings>
+        <tab>Account</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    
+    <!-- User Permissions -->
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowUniversalSearch</name>
+    </userPermissions>
+    
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShowCompanyNameField</name>
+    </userPermissions>
+    
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ModifyAllData</name>
+    </userPermissions>
+</PermissionSet>
