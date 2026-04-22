@@ -12,7 +12,7 @@ export async function startRepl() {
         {
           type: 'input',
           name: 'input',
-          message: chalk.cyan('sfai ❯'),
+          message: chalk.magenta.bold('sfai') + chalk.gray(' ❯'),
           prefix: ''
         }
       ]);

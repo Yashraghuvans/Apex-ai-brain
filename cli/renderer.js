@@ -60,3 +60,7 @@ export function renderSection(title, content) {
     borderColor: 'cyan'
   }));
 }
+
+export function renderAgentThought(agentName, thought) {
+  console.log(chalk.gray(`[${chalk.magenta(agentName)}] 🧠 ${thought}`));
+}

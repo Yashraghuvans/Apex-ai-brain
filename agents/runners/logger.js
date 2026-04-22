@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import * as renderer from '../../cli/renderer.js';
 
 export class AgentLogger {
   constructor() {
@@ -20,11 +21,13 @@ export class AgentLogger {
     const logEntry = `[${chalk.cyan(name)}] STATUS: ${formattedStatus} - ${message}`;
     this.logs.push({ timestamp: new Date(), name, type: 'status', message: logEntry });
     
-    // In phase 2, we might not want to print everything to terminal directly unless in debug mode,
-    // but the prompt implies showing it. We'll rely on the command handlers to show spinners, 
-    // but we'll print errors directly.
+    // Better visual for thinking/working
+    if (status === 'thinking' || status === 'working') {
+      renderer.renderAgentThought(name, message);
+    }
+
     if (status === 'error') {
-      console.log(`\n${logEntry}`);
+      renderer.renderError(`${name}: ${message}`);
     }
   }
 
