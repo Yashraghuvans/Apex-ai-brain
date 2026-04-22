@@ -72,7 +72,48 @@ class AgentOrchestrator extends EventEmitter {
   }
 
   async assign(task) {
-    // Phase 2: Simple routing based on keywords
+    // Phase 3: Intelligent routing using the planner agent
+    logger.info(`Orchestrator: Planning task execution...`);
+    
+    try {
+      // 1. Spawn the planner agent
+      const planner = await this.spawn('planner');
+      
+      // 2. Run the task through the planner to get the breakdown
+      const planResult = await planner.run(task, {
+        availableAgents: this.list()
+      });
+
+      // 3. Parse the plan from the result
+      // The planner is instructed to output JSON, but we'll try to extract it from the markdown-wrapped text
+      let plan;
+      try {
+        const jsonMatch = planResult.text.match(/```json\n([\s\S]*?)\n```/) || 
+                          planResult.text.match(/{[\s\S]*}/);
+        plan = JSON.parse(jsonMatch ? jsonMatch[1] || jsonMatch[0] : planResult.text);
+      } catch (e) {
+        logger.warn('Failed to parse plan JSON. Falling back to simple routing.');
+        // Fallback is still keyword-based but slightly smarter now
+        return this.legacyAssign(task);
+      }
+
+      // 4. Execute the plan (Phase 4: Multi-agent execution logic)
+      // For now, spawn the first assigned agent for the most important task
+      if (plan.tasks && plan.tasks.length > 0) {
+        const mainTask = plan.tasks[0];
+        logger.info(`Orchestrator: Plan created. Primary agent: ${mainTask.assignedAgent}`);
+        return await this.spawn(mainTask.assignedAgent, mainTask.description);
+      }
+
+      return await this.legacyAssign(task);
+
+    } catch (error) {
+      logger.error(`Planning failed: ${error.message}. Falling back to legacy routing.`);
+      return this.legacyAssign(task);
+    }
+  }
+
+  async legacyAssign(task) {
     const t = typeof task === 'string' ? task.toLowerCase() : JSON.stringify(task).toLowerCase();
     
     let bestAgent = 'planner';
