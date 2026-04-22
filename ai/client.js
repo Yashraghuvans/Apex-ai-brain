@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import { GeminiProvider } from './providers/gemini.js';
 import { ClaudeProvider } from './providers/claude.js';
+import { modelRouter } from './model-router.js';
 import * as logger from '../utils/logger.js';
 import { TokenTracker } from './token-tracker.js';
 
@@ -48,7 +49,9 @@ class UnifiedAIClient {
     
     // Temporarily override model if specified in options
     const originalModel = provider.model;
-    if (options.model) provider.model = options.model;
+    if (options.model) {
+      provider.model = modelRouter.resolveModel(options.model);
+    }
 
     const response = await provider.complete(prompt, options);
     
@@ -64,7 +67,9 @@ class UnifiedAIClient {
     const provider = this.getProvider(providerName);
 
     const originalModel = provider.model;
-    if (options.model) provider.model = options.model;
+    if (options.model) {
+      provider.model = modelRouter.resolveModel(options.model);
+    }
 
     const response = await provider.stream(prompt, options, onChunk);
 

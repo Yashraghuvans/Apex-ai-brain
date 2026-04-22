@@ -37,6 +37,15 @@ export class ModelRouter {
         return { provider: 'gemini', model: 'gemini-1.5-flash' }; // fallback to claude-3-haiku-20240307
     }
   }
+
+  resolveModel(logicalName) {
+    const map = {
+      'simple': 'gemini-1.5-flash',
+      'medium': 'gemini-1.5-pro',
+      'complex': 'gemini-1.5-pro'
+    };
+    return map[logicalName] || logicalName;
+  }
 }
 
 export const modelRouter = new ModelRouter();

@@ -32,11 +32,22 @@ export function renderTable(headers, data) {
   console.log(table.toString());
 }
 
+let activeSpinner = null;
+
 export function renderSpinner(msg) {
-  return ora({
+  if (activeSpinner) activeSpinner.stop();
+  activeSpinner = ora({
     text: msg,
     color: 'cyan'
   }).start();
+  return activeSpinner;
+}
+
+export function clearSpinner() {
+  if (activeSpinner) {
+    activeSpinner.stop();
+    activeSpinner = null;
+  }
 }
 
 export function renderSection(title, content) {
