@@ -32,54 +32,43 @@ yarn install
 
 ## Step 3: Configure API Keys
 
-Create a `.env` file in the project root:
+Create a `.env` file in the **Apex AI Brain directory**:
 
 ```env
-# Claude API Key (Anthropic)
+# Google Gemini API Key (Required for default)
+GEMINI_API_KEY=AIza...
+
+# Claude API Key (Optional)
 ANTHROPIC_API_KEY=sk-ant-...
 
-# Google Gemini API Key
-GOOGLE_API_KEY=AIza...
-
-# Optional: Default Model
-DEFAULT_MODEL=claude
-
-# Optional: Project workspace
-PROJECT_WORKSPACE=/path/to/your/salesforce-project
+# Configuration
+DEFAULT_PROVIDER=gemini
+DEFAULT_MODEL=gemini-1.5-pro
 ```
 
-### Obtaining API Keys
+## Step 4: Global Installation
 
-#### Claude (Anthropic)
-1. Visit [console.anthropic.com](https://console.anthropic.com/)
-2. Create an account (if you don't have one)
-3. Navigate to API Keys section
-4. Create a new API key
-5. Copy and paste into `.env`
-
-#### Google Gemini
-1. Visit [aistudio.google.com](https://aistudio.google.com/)
-2. Click on "Get API Key"
-3. Create a new API key
-4. Copy and paste into `.env`
-
-## Step 4: Verify Installation
-
-Test that everything is installed correctly:
+To use the `sfai` command from anywhere (especially inside your Salesforce project folders), run:
 
 ```bash
-npm start
-# or directly
-node bin/sfai.js
+npm link
 ```
 
-You should see the Apex AI Brain banner and a welcome message.
+Now you can open any Salesforce project in your terminal and simply type `sfai` to start the agentic loop.
 
-## Step 5: Initialize Your First Project
+## Step 5: Initialize Your Project
+
+Navigate to your Salesforce DX project folder and run:
 
 ```bash
-sfai /init
+cd /path/to/my-sfdx-project
+sfai
+
+# Inside SFAI REPL:
+sfai ❯ /init
 ```
+
+This will scan your Salesforce project (classes, LWCs, triggers) and set up the context for the agents.
 
 This will scan your Salesforce project and set up the context.
 

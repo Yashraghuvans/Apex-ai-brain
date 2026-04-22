@@ -20,21 +20,49 @@ Apex AI Brain is like **architectural ESLint rules for AI**. It combines:
 - Governor limit validation
 - Feature-Sliced Design (FSD) architecture enforcement
 
-## Quick Start
+## Installation & Usage
+
+### 1. Global Installation
+Install `sfai` globally to use it within any Salesforce project on your machine.
 
 ```bash
-# Install
+# Clone the repository
+git clone https://github.com/Yashraghuvans/Apex-ai-brain.git
+cd Apex-ai-brain
+
+# Install dependencies and link the command
 npm install
-
-# Set up environment
-cp .env.example .env
-# Add your API keys to .env
-
-# Run
-npm start
+npm link
 ```
 
-For complete setup instructions, see [Installation Guide](./documentation/docs/getting-started/installation.md)
+### 2. Configuration
+The system requires API keys for Claude or Gemini.
+
+1. Create a `.env` file in the **source code directory** (where you cloned Apex-ai-brain):
+   ```env
+   GEMINI_API_KEY=your_key_here
+   ANTHROPIC_API_KEY=your_key_here
+   DEFAULT_PROVIDER=gemini # or claude
+   DEFAULT_MODEL=gemini-1.5-pro
+   ```
+
+### 3. Using in your Salesforce Project
+Navigate to your Salesforce DX project and initialize the brain:
+
+```bash
+cd /path/to/your/sfdx-project
+sfai
+
+# Inside the SFAI terminal, initialize the project context
+sfai ❯ /init
+```
+
+## Quick Start Commands
+Once initialized, you can generate code directly:
+- `/apex generate --object Account --type service`
+- `/lwc generate --name myComponent --type form`
+- `/test generate --class MyService`
+- `/soql generate --object Lead --filters "Status='Open'"`
 
 ## Features
 
