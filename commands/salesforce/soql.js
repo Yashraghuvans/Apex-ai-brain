@@ -1,187 +1,41 @@
 /**
- * SOQL Command - Generate optimized SOQL queries
- * Generates selective, indexed, injection-safe queries with explanations
+ * SOQL Command - Entry point for SOQL generation and optimization
  */
 
-import AgentBase from '../../agents/agent-base.js';
-import skillsLoader from '../../core/skills-loader.js';
-import rulesLoader from '../../core/rules-loader.js';
+import { orchestrator } from '../../agents/index.js';
+import * as renderer from '../../cli/renderer.js';
 
-class SoqlCommand extends AgentBase {
-    constructor() {
-        super('soql');
-        this.description = 'Generate optimized SOQL queries (selective fields, bind variables)';
-        this.examples = [
-            'sfai /soql generate --object Lead --filters "Status=Open,Score>100"',
-            'sfai /soql optimize --object Account --query "SELECT * FROM Account"',
-            'sfai /soql explain --object Opportunity --relationships "Account,Owner"'
-        ];
+export default {
+  command: '/soql',
+  description: 'Generate or optimize SOQL queries',
+  usage: '/soql generate --object <ObjectName> --filters "<filters>"',
+  flags: [
+    { name: '--object', description: 'The Salesforce object name' },
+    { name: '--filters', description: 'Query filters (e.g., "Status=Open")' },
+    { name: '--query', description: 'Existing query to optimize' }
+  ],
+  handler: async (args, options = {}) => {
+    const { object, filters, query } = options;
+    
+    let task = '';
+    if (query) {
+      task = `Optimize the following SOQL query: ${query}. 
+      Ensure it is selective, uses bind variables, and includes WITH SECURITY_ENFORCED.`;
+    } else if (object) {
+      task = `Generate an optimized SOQL query for the ${object} object with these filters: ${filters || 'none'}.
+      Ensure it follows all Salesforce security and performance best practices.`;
+    } else {
+      renderer.renderError('Either --object or --query is required.');
+      return;
     }
 
-    async execute(args = {}) {
-        const { object, filters, query, action, relationships } = args;
+    renderer.renderInfo('Dispatching SOQL optimizer agent...');
 
-        if (action === 'generate' && object) {
-            return this.generateQuery(object, filters);
-        }
-        if (action === 'optimize' && query) {
-            return this.optimizeQuery(query);
-        }
-        if (action === 'explain' && object) {
-            return this.explainQuery(object, relationships);
-        }
-
-        return this.showUsage();
+    try {
+      await orchestrator.assign(task);
+      renderer.renderSuccess('Agent assigned to SOQL task');
+    } catch (error) {
+      renderer.renderError(`Failed to dispatch agent: ${error.message}`);
     }
-
-    async generateQuery(objectName, filters) {
-        this.logger.start(`Generating optimized SOQL for ${objectName}...`);
-
-        try {
-            const skills = await skillsLoader.getInjectableForContext('soql-optimization');
-            const coreRules = rulesLoader.getInjectableCore();
-            const securityRules = rulesLoader.getInjectableForContext('security-audit');
-
-            const prompt = `
-You are a Salesforce SOQL expert. Generate optimized queries.
-
-${coreRules}
-
-${securityRules}
-
-${skills}
-
-## Task
-Generate optimized SOQL query for ${objectName}.
-
-Filters: ${filters || 'none'}
-
-Requirements:
-- SELECT specific fields (no SELECT *)
-- Use bind variables (no concatenation)
-- Indexed field filters preferred
-- WITH SECURITY_ENFORCED
-- LIMIT clause to prevent Large Data Set operations
-- Include related fields if applicable
-
-Output:
-1. SOQL query (fully formatted)
-2. Explanation of:
-   - Why fields are selected
-   - Indexed fields used
-   - Security enforcement
-   - Governor limit considerations
-3. Performance notes
-        `;
-
-            const result = await this.callAI(prompt);
-            this.logger.success('✅ Generated optimized SOQL');
-            return result;
-
-        } catch (error) {
-            this.logger.error(`Failed to generate SOQL: ${error.message}`);
-            throw error;
-        }
-    }
-
-    async optimizeQuery(query) {
-        this.logger.start('Optimizing SOQL query...');
-
-        try {
-            const skills = await skillsLoader.getInjectableForContext('soql-optimization');
-
-            const prompt = `
-You are a Salesforce SOQL optimization expert.
-
-${skills}
-
-## Task
-Optimize this SOQL query:
-
-${query}
-
-Provide:
-1. Optimized version
-2. Improvements made
-3. Performance impact
-4. Security checks passed
-        `;
-
-            const result = await this.callAI(prompt);
-            this.logger.success('✅ Query optimized');
-            return result;
-
-        } catch (error) {
-            this.logger.error(`Failed to optimize SOQL: ${error.message}`);
-            throw error;
-        }
-    }
-
-    async explainQuery(objectName, relationships) {
-        this.logger.start(`Explaining query patterns for ${objectName}...`);
-
-        try {
-            const skills = await skillsLoader.getInjectableForContext('soql-optimization');
-
-            const prompt = `
-You are a Salesforce SOQL expert.
-
-${skills}
-
-## Task
-Explain query best practices for ${objectName} object.
-
-Relationships to consider: ${relationships || 'none'}
-
-Provide:
-1. Standard query patterns
-2. Relationship query patterns
-3. Aggregation patterns
-4. Performance considerations
-5. Security requirements
-        `;
-
-            const result = await this.callAI(prompt);
-            this.logger.success('✅ Query patterns explained');
-            return result;
-
-        } catch (error) {
-            this.logger.error(`Failed to explain query: ${error.message}`);
-            throw error;
-        }
-    }
-
-    showUsage() {
-        return `
-SOQL Command - Generate and optimize SOQL queries
-
-Usage:
-  sfai /soql generate --object <ObjectName> [--filters "field=value,field2>value2"]
-  sfai /soql optimize --query "SELECT ... FROM ..."
-  sfai /soql explain --object <ObjectName> [--relationships "Object1,Object2"]
-
-Examples:
-  sfai /soql generate --object Lead --filters "Status=Open,Score>100"
-  sfai /soql optimize --query "SELECT * FROM Account"
-  sfai /soql explain --object Opportunity --relationships "Account,Owner"
-
-What you get:
-  ✓ Selective field queries (no SELECT *)
-  ✓ Bind variables (injection-safe)
-  ✓ Indexed field optimization
-  ✓ Security enforced (WITH SECURITY_ENFORCED)
-  ✓ Proper LIMIT clauses
-  ✓ Performance analysis
-  ✓ Governor limit awareness
-
-Best Practices:
-  - Always specify fields (not *)
-  - Use bind variables for parameters
-  - Filter on indexed fields
-  - Include WITH SECURITY_ENFORCED
-  - Set LIMIT to avoid large datasets
-        `;
-    }
-}
-
-export default SoqlCommand;
+  }
+};

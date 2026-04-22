@@ -58,16 +58,16 @@ export function initializeRegistry() {
   registerCommand(costCommand);
 
   // Phase 3: Salesforce Commands
-  registerCommand(new ApexCommand());
-  registerCommand(new LwcCommand());
-  registerCommand(new TriggerCommand());
-  registerCommand(new SoqlCommand());
-  registerCommand(new FlowCommand());
-  registerCommand(new SchemaCommand());
-  registerCommand(new TestCommand());
-  registerCommand(new ValidateCommand());
-  registerCommand(new DeployCommand());
-  registerCommand(new DiffCommand());
+  registerCommand(ApexCommand);
+  registerCommand(LwcCommand);
+  registerCommand(TriggerCommand);
+  registerCommand(SoqlCommand);
+  registerCommand(FlowCommand);
+  registerCommand(SchemaCommand);
+  registerCommand(TestCommand);
+  registerCommand(ValidateCommand);
+  registerCommand(DeployCommand);
+  registerCommand(DiffCommand);
 
   registerCommand({
     command: '/clear',
