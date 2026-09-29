@@ -1,48 +1,49 @@
-/* ApexAI Brain Documentation Styling */
+/* Apex AI Brain documentation styling */
 
 :root {
-  --ifm-color-primary: #00a1e0;
-  --ifm-color-primary-dark: #008ec7;
-  --ifm-color-primary-darker: #007fad;
-  --ifm-color-primary-darkest: #005f88;
-  --ifm-color-primary-light: #1ab3ff;
-  --ifm-color-primary-lighter: #2ab6ff;
-  --ifm-color-primary-lightest: #5dd1ff;
-  
-  --ifm-color-secondary: #ff6b6b;
-  --ifm-color-success: #51cf66;
-  --ifm-color-warning: #ffa94d;
-  --ifm-color-danger: #ff6b9d;
-  --ifm-color-info: #9c36ff;
-  
-  --code-background: #f5f5f5;
-  --navbar-background: #f8f9fa;
-  
-  --apex-gold: #f4a300;
-  --apex-blue: #00a1e0;
-  --apex-purple: #8e75b2;
+  --ifm-color-primary: #397c77;
+  --ifm-color-primary-dark: #2d6662;
+  --ifm-color-primary-darker: #245550;
+  --ifm-color-primary-darkest: #183d3a;
+  --ifm-color-primary-light: #599890;
+  --ifm-color-primary-lighter: #76ada5;
+  --ifm-color-primary-lightest: #b4d6ce;
+  --ifm-color-secondary: #ff7449;
+  --ifm-color-success: #397c77;
+  --ifm-color-warning: #f1a33c;
+  --ifm-color-danger: #d8504a;
+  --ifm-color-info: #397c77;
+  --ifm-background-color: #f3efe5;
+  --ifm-font-family-base: 'Space Grotesk', sans-serif;
+  --ifm-font-family-monospace: 'DM Mono', monospace;
+  --code-background: #152b2d;
+  --navbar-background: #101820;
 }
 
 [data-theme='dark'] {
-  --code-background: #1e1e1e;
-  --navbar-background: #1a1a1a;
+  --ifm-background-color: #101820;
+  --ifm-background-surface-color: #152b2d;
+  --ifm-font-color-base: #f3efe5;
+  --code-background: #0d2022;
+  --navbar-background: #101820;
 }
 
 /* Navbar Styling */
 .navbar {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid var(--ifm-color-primary);
+  background: var(--navbar-background);
+  box-shadow: none;
+  border-bottom: 1px solid rgba(215, 243, 107, 0.3);
 }
 
 .navbar__logo {
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--ifm-color-primary);
+  color: #d7f36b;
 }
 
 /* Sidebar Styling */
 .sidebar {
-  background: var(--navbar-background);
+  background: #eef0e5;
 }
 
 .sidebar__item {
@@ -56,21 +57,21 @@
 
 /* Main Content */
 .main-wrapper {
-  padding: 2rem 0;
+  padding: 2rem 0 4rem;
 }
 
 /* Code Blocks */
 code {
   background-color: var(--code-background);
   padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-family: 'Fira Code', monospace;
+  border-radius: 0;
+  font-family: 'DM Mono', monospace;
   font-size: 0.95em;
 }
 
 pre {
   background-color: var(--code-background);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 1rem;
   overflow-x: auto;
 }
@@ -84,7 +85,7 @@ pre code {
 h1 {
   color: var(--ifm-color-primary);
   font-weight: 800;
-  border-bottom: 3px solid var(--ifm-color-primary);
+  border-bottom: 2px solid var(--ifm-color-primary);
   padding-bottom: 0.5rem;
 }
 
@@ -247,7 +248,7 @@ li {
 /* Footer */
 .footer {
   background-color: var(--navbar-background);
-  border-top: 2px solid var(--ifm-color-primary);
+  border-top: 1px solid rgba(215, 243, 107, 0.3);
 }
 
 .footer__item {

@@ -36,7 +36,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
+          routeBasePath: '/docs',
           sidebarPath: './sidebars.js',
           editUrl:
             'https://github.com/Yashraghuvans/Apex-ai-brain/tree/main/documentation',
@@ -60,7 +60,12 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'documentationSidebar',
             position: 'left',
-            label: 'Documentation',
+            label: 'Playbook',
+          },
+          {
+            to: '/',
+            label: 'Home',
+            position: 'left',
           },
           {
             href: 'https://github.com/Yashraghuvans/Apex-ai-brain',
@@ -77,15 +82,15 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/getting-started/installation',
+                to: '/docs/getting-started/installation',
               },
               {
                 label: 'Guides',
-                to: '/guides/cli-usage',
+                to: '/docs/guides/cli-usage',
               },
               {
                 label: 'Agents',
-                to: '/agents/overview',
+                to: '/docs/agents/overview',
               },
             ],
           },
