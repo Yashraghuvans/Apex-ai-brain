@@ -8,15 +8,33 @@ export function parseInput(input) {
   const options = {};
   const words = [];
   
-  parts.forEach(part => {
+  for (let i = 0; i < parts.length; i++) {
+    const part = parts[i];
     if (part.startsWith('--')) {
-      const flagName = part.substring(2);
-      options[flagName] = true;
+      // Handle --flag=value syntax
+      const flagPart = part.substring(2);
+      const eqIndex = flagPart.indexOf('=');
+      let flagName, flagValue;
+      
+      if (eqIndex >= 0) {
+        flagName = flagPart.substring(0, eqIndex);
+        flagValue = flagPart.substring(eqIndex + 1);
+      } else {
+        flagName = flagPart;
+        // Check if next part is a value (not another flag)
+        if (i + 1 < parts.length && !parts[i + 1].startsWith('--')) {
+          flagValue = parts[i + 1];
+          i++; // Skip the value
+        } else {
+          flagValue = true;
+        }
+      }
+      options[flagName] = flagValue;
     } else {
       words.push(part);
     }
-  });
-
+  }
+  
   return { words, options };
 }
 

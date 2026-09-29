@@ -10,7 +10,7 @@ dotenv.config();
 class UnifiedAIClient {
   constructor() {
     this.activeProviderName = process.env.DEFAULT_PROVIDER || 'gemini';
-    this.activeModel = process.env.DEFAULT_MODEL || 'gemini-1.5-flash';
+    this.activeModel = process.env.DEFAULT_MODEL || 'gemini-2.5-flash';
     this.providers = {};
     this.tokenTracker = new TokenTracker();
     this._initializeProviders();
@@ -21,7 +21,7 @@ class UnifiedAIClient {
       this.providers['gemini'] = new GeminiProvider(process.env.GEMINI_API_KEY, this.activeModel);
     }
     if (process.env.ANTHROPIC_API_KEY) {
-      this.providers['claude'] = new ClaudeProvider(process.env.ANTHROPIC_API_KEY, 'claude-3-haiku-20240307');
+      this.providers['claude'] = new ClaudeProvider(process.env.ANTHROPIC_API_KEY, 'claude-3-5-haiku-20241022');
     }
   }
 
