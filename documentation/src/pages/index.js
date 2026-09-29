@@ -33,37 +33,45 @@ export default function Home() {
           <div className="arcade-hero__glow arcade-hero__glow--left" aria-hidden="true" />
           <div className="arcade-hero__glow arcade-hero__glow--right" aria-hidden="true" />
 
-          <div className="arcade-shell arcade-hero__content">
-            <p className="eyebrow"><span className="eyebrow__dot" /> Salesforce AI / online</p>
-            <h1>Build Salesforce systems that <span>play by the rules.</span></h1>
-            <p className="hero-copy">
-              Apex AI Brain is the command center for production-minded Salesforce development:
-              specialized agents, architectural memory, and guardrails that keep generated code shipshape.
-            </p>
-            <div className="hero-actions">
-              <Link className="arcade-button arcade-button--primary" to="/docs/getting-started/installation">
-                Enter the playbook <span aria-hidden="true">↗</span>
-              </Link>
-              <a className="arcade-button arcade-button--quiet" href="https://github.com/Yashraghuvans/Apex-ai-brain">
-                View source <span aria-hidden="true">⌘</span>
-              </a>
+          <div className="arcade-shell arcade-hero__layout">
+            <div className="arcade-hero__content">
+              <p className="eyebrow"><span className="eyebrow__dot" /> Salesforce AI / online</p>
+              <h1>Build Salesforce systems that <span>play by the rules.</span></h1>
+              <p className="hero-copy">
+                Apex AI Brain is the command center for production-minded Salesforce development:
+                specialized agents, architectural memory, and guardrails that keep generated code shipshape.
+              </p>
+              <div className="hero-actions">
+                <Link className="arcade-button arcade-button--primary" to="/docs/getting-started/installation">
+                  Enter the playbook <span aria-hidden="true">↗</span>
+                </Link>
+                <a className="arcade-button arcade-button--quiet" href="https://github.com/Yashraghuvans/Apex-ai-brain">
+                  View source <span aria-hidden="true">⌘</span>
+                </a>
+              </div>
+              <div className="hero-status" aria-label="Project status">
+                <span>16 specialist agents</span>
+                <span>50+ enforced rules</span>
+                <span>Claude + Gemini</span>
+              </div>
             </div>
-            <div className="hero-status" aria-label="Project status">
-              <span>16 specialist agents</span>
-              <span>50+ enforced rules</span>
-              <span>Claude + Gemini</span>
-            </div>
-          </div>
 
-          <div className="arcade-shell hero-console" aria-label="Apex AI Brain console preview">
-            <div className="hero-console__topline"><span>APEX_AI_BRAIN // CORE</span><span>SYS 01</span></div>
-            <div className="hero-console__screen">
-              <div className="console-line console-line--muted">&gt; scanning Salesforce project...</div>
-              <div className="console-line">&gt; context loaded <strong>42 files</strong></div>
-              <div className="console-line">&gt; rules armed <strong>50+ checks</strong></div>
-              <div className="console-line console-line--accent">&gt; ready for your next move<span className="console-caret" /></div>
+            <div className="hero-console-stack">
+              <div className="hero-console" aria-label="Apex AI Brain console preview">
+                <div className="hero-console__topline"><span>APEX_AI_BRAIN // CORE</span><span>SYS 01</span></div>
+                <div className="hero-console__screen">
+                  <div className="console-line console-line--muted">&gt; scanning Salesforce project...</div>
+                  <div className="console-line">&gt; context loaded <strong>42 files</strong></div>
+                  <div className="console-line">&gt; rules armed <strong>50+ checks</strong></div>
+                  <div className="console-line console-line--accent">&gt; ready for your next move<span className="console-caret" /></div>
+                </div>
+                <div className="hero-console__controls"><span className="control-light" /><span className="control-light control-light--hot" /><span className="control-label">PRESS START</span></div>
+              </div>
+              <div className="hero-console__metrics" aria-label="System telemetry">
+                <div><span>AGENTS ONLINE</span><strong>16</strong></div>
+                <div><span>RULES ARMED</span><strong>50+</strong></div>
+              </div>
             </div>
-            <div className="hero-console__controls"><span className="control-light" /><span className="control-light control-light--hot" /><span className="control-label">PRESS START</span></div>
           </div>
         </section>
 
